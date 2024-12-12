@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter WebView Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Flutter WebView Interaction</h1>
+    <input type="text" id="inputField" placeholder="Enter some text here">
+    <button onclick="readValue()">Show Value</button>
+    <p id="output"></p>
+
+    <script>
+        function readValue() {
+            const value = document.getElementById('inputField').value;
+            document.getElementById('output').innerText = `You entered: ${value}`;
+        }
+    </script>
+</body>
+</html>
